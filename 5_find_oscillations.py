@@ -29,7 +29,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
-from fdl_ulf_shock_detect import detect_shock_triggered_ulf, DEFAULT_BAND_HZ
+from ulf_shock_detect import detect_shock_triggered_ulf, DEFAULT_BAND_HZ
 from helper import MFAC_convert, extract_drift_echo_candidates_dyn_echo
 import spacepy
 
