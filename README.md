@@ -14,16 +14,28 @@ Data files displayed in italics
 
 -----
 
-helper: General methods used in project
+**helper**: General methods used in project
 
-**1_load_goes_data**: Load GOES 13, 15, 16, 17, 18 MAG data from NCEI servers
+**1_load_goes_data.py**: Load GOES 13, 15, 16, 17, 18 MAG data from NCEI servers
 
-**2_prep_goes**: Unify GOES data into 1-min cadence dataset
+**2_prep_goes.py**: Unify GOES data into 1-min cadence dataset
 
-**2a_preprocess_goes**: Calculate derived time series quantities from GOES data, including MFA field and satellite MLT
+**2a_preprocess_goes.py**: Calculate derived time series quantities from GOES data, including MFA field and satellite MLT
 
-**3a_refine_steps_ts**: 
+**3a_refine_steps_ts.py**: Refines shock candidate list by Pelkum Donahue & Inceoglu, 2026b: https://github.com/keahipelkumdonahue/xgboost_3_sat_shocks
 
-**3_propagate_shocks**: Propagate all shocks observed at L1
+_all_cases.pkl_: Raw catalogue of all candidate shock events observed a L1 by ACE, Wind, and DSCOVR, prepared by Pelkum Donahue & Inceoglu.
+
+**3_propagate_shock.pys**: Propagates all shocks observed at L1 to GEO via plane wave propagation
+
+**4_crosscorr.py**: Refines shock arrival time at GEO via magnetic field magnitude cross-correlation
+
+**5_find_oscillation.py**: Search around predicted shock arrivals for ULF waves via spectral peak extraction
+
+  **ulf_shock_detect**: Helper methods for ULF oscillation detection
+
+**5a_analyze_ULF**: Compile all detected ULF oscillations and plot MLT distributions
+
+**8a_process_ts**: Process time-series data in MiniRocket
 
 
