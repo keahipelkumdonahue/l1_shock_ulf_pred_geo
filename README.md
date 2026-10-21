@@ -24,11 +24,17 @@ Data files displayed in italics
 
 **3a_refine_steps_ts.py**: Refines shock candidate list by Pelkum Donahue & Inceoglu, 2026b: https://github.com/keahipelkumdonahue/xgboost_3_sat_shocks
 
-_all_cases.pkl_: Raw catalogue of all candidate shock events observed a L1 by ACE, Wind, and DSCOVR, prepared by Pelkum Donahue & Inceoglu.
+_vlim_all_cases.pkl_: Raw catalogue of all candidate shock events observed a L1 by ACE, Wind, and DSCOVR, prepared by Pelkum Donahue & Inceoglu.
+
+_refined_corrected_cases.pkl_: Refined L1 shocks after XGBoost correction
 
 **3_propagate_shock.pys**: Propagates all shocks observed at L1 to GEO via plane wave propagation
 
+_goes_impacts.pkl_: All propagated shocks from L1 to GOES
+
 **4_crosscorr.py**: Refines shock arrival time at GEO via magnetic field magnitude cross-correlation
+
+_goes_impacts_xcorr_: Propagated shocks after cross-correlation arrival time calculation
 
 **5_find_oscillation.py**: Search around predicted shock arrivals for ULF waves via spectral peak extraction
 
